@@ -1,0 +1,113 @@
+/* ============ TOKENS (sacados exactos de Figma) ============ */
+:root {
+  --olive: #aba981;
+  --cream: #fff9e5;
+  --btn-text: #fffcf3;
+  --green-dark: #3a4601;
+  --green-mid: #809a00;
+  --green-accent: #62740a;
+
+  --font-title: 'Delius Swash Caps', cursive;
+  --font-body: 'Delius', sans-serif;
+  --font-script-sm: 'Ms Madi', cursive;
+  --font-script-lg: 'Meow Script', cursive;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body { background: var(--olive); font-family: var(--font-body); color: var(--green-dark); }
+img { display: block; max-width: 100%; }
+a { text-decoration: none; }
+
+.page { position: relative; width: 360px; margin: 0 auto; background: var(--olive); overflow: hidden; }
+.page--desktop { width: 1440px; }
+
+.view--desktop { display: none; }
+@media (min-width: 900px) {
+  .view--mobile { display: none; }
+  .view--desktop { display: block; }
+}
+
+/* ============ HERO ============ */
+.hero { position: relative; height: 822px; overflow: hidden; background: var(--olive); }
+.hero__stripes {
+  position: absolute; inset: 0;
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(255,255,255,0.10) 0px, rgba(255,255,255,0.10) 26px,
+    transparent 26px, transparent 46px
+  );
+}
+
+.hero__badge { position: relative; width: 360px; height: 750px; margin: 12px auto 0; }
+.hero__badge--desktop { width: 478px; margin-left: 477px; margin-top: 12px; }
+.hero__badge-frame { position: absolute; inset: 0; width: 100%; height: 100%; }
+
+.hero__title {
+  font-family: var(--font-title); font-weight: 400; font-size: 56px;
+  color: var(--green-accent); margin: 0; position: absolute; left: 101px; top: 85px;
+}
+.hero__subtitle {
+  font-family: var(--font-script-sm); font-size: 32px; color: var(--green-accent);
+  margin: 0; position: absolute; left: 101px; top: 147px;
+}
+
+.hero__cluster { position: absolute; left: 17px; top: 200px; width: 366px; }
+.hero__kite-toy { position: absolute; left: 257px; top: 184px; width: 127px; transform: rotate(163.74deg) scaleY(-1); }
+.hero__badge--desktop .hero__kite-toy { left: 398px; }
+
+.hero__date { position: absolute; left: 35px; top: 545px; width: 298px; height: 62px; }
+.hero__date-icon { position: absolute; left: 100px; top: 0; width: 120px; }
+.hero__date-text { position: absolute; top: 12px; font-family: var(--font-title); font-size: 20px; color: var(--green-dark); }
+.hero__date-text--left { left: 0; width: 96px; text-align: center; }
+.hero__date-text--right { right: 0; width: 96px; text-align: center; }
+
+/* ============ INFO ============ */
+.info { background: var(--cream); padding: 42px 0; display: flex; flex-direction: column; align-items: center; gap: 32px; }
+.info--desktop { flex-direction: row; justify-content: center; align-items: center; gap: 40px; padding: 74px 0; }
+.info__divider { width: 1px; height: 100px; background: var(--green-dark); opacity: .3; }
+.info__block { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.info__where { font-family: var(--font-body); font-size: 20px; margin: 0; }
+.info--desktop .info__where { font-size: 24px; }
+
+.btn { background: var(--green-accent); color: var(--btn-text); font-family: var(--font-title); font-size: 16px; padding: 10px 24px; border-radius: 8px; display: inline-block; }
+.btn--lg { font-size: 32px; padding: 14px 32px; }
+
+.countdown__label { font-family: var(--font-script-lg); font-size: 40px; color: var(--green-accent); margin: 0 0 8px; text-align: center; }
+.countdown__label--lg { font-size: 56px; }
+.countdown { display: flex; align-items: flex-start; gap: 8px; font-family: var(--font-title); color: var(--green-dark); }
+.countdown__unit { display: flex; flex-direction: column; align-items: center; width: 64px; }
+.countdown__num { font-size: 32px; }
+.countdown__word { font-size: 16px; }
+.countdown__sep { font-size: 32px; }
+
+/* ============ FOTOS FULL WIDTH ============ */
+.photo-strip { position: relative; height: 350px; overflow: hidden; }
+.photo-strip img { width: 100%; height: 100%; object-fit: cover; }
+.photo-strip--tall { height: 450px; }
+.photo-strip img.kite-deco { position: absolute; width: 150px; height: auto; right: 24px; top: 24px; z-index: 2; }
+.photo-strip img.kite-deco--desktop { right: 120px; top: 24px; }
+
+/* ============ EL DÍA — mobile ============ */
+.timeline { position: relative; background: var(--cream); padding: 55px 0 76px; text-align: center; }
+.script-heading { font-family: var(--font-script-lg); font-size: 40px; color: var(--green-accent); margin: 0 0 20px; }
+.script-heading--lg { font-size: 64px; }
+.timeline__art { width: 280px; margin: 0 auto; }
+
+/* ============ EL DÍA — desktop (ilustración + overlay) ============ */
+.timeline--desktop { padding: 0; background: var(--cream); }
+.timeline__bg { position: relative; width: 1440px; }
+.timeline__bg img { width: 100%; display: block; }
+.td__label { position: absolute; font-family: var(--font-title); font-size: 24px; color: var(--green-mid); white-space: nowrap; }
+.td__label--dark { color: var(--green-dark); }
+.td__photo { position: absolute; border-radius: 8px; object-fit: cover; }
+
+/* ============ RSVP ============ */
+.rsvp { background: var(--cream); padding: 60px 0; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.rsvp--desktop { padding: 90px 0; }
+
+/* ============ FOOTER TAB BAR ============ */
+.tabbar { height: 56px; background: var(--cream); }
+.tabbar__icons { display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 20px; }
+.tabbar--desktop { height: 64px; }
+.tabbar--desktop .tabbar__icons { max-width: 411px; margin: 0 auto; font-size: 24px; }
