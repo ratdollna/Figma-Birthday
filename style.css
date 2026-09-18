@@ -19,8 +19,7 @@ body { background: var(--olive); font-family: var(--font-body); color: var(--gre
 img { display: block; max-width: 100%; }
 a { text-decoration: none; }
 
-.page { position: relative; width: 360px; margin: 0 auto; background: var(--olive); overflow: hidden; }
-.page--desktop { width: 1440px; }
+body { overflow-x:hidden; } .page { position: relative;width: 360px; margin: 0 auto;overflow:visible; } .page--desktop { width: 1440px; } .hero, .info, .timeline, .rsvp, .tabbar { box-shadow: 0 0 0 100vmax var(--bg,transparent); clip-path: inset(0 -100vmax); } .hero { --bg: var(--olive); } .info, .timeline, .rsvp, .tabbar { --bg: var(--cream); }
 
 .view--desktop { display: none; }
 @media (min-width: 900px) {
