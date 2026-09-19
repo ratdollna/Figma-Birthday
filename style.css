@@ -97,8 +97,8 @@ a { text-decoration: none; }
 .photo-strip img.kite-deco--desktop { right: 120px; top: 24px; }
 
 /* ============ EL DIA — mobile ============ */
-.timeline { position: relative; background: var(--cream); padding: 55px 0 0; text-align: center; }
-.script-heading { font-family: var(--font-script-lg); font-size: 40px; color: var(--green-accent); margin: 0 0 20px; }
+.timeline { position: relative; background: var(--cream); padding: 32px 0 0; text-align: center; }
+.script-heading { font-family: var(--font-script-lg); font-size: 40px; color: var(--green-accent); margin: 0 0 4px; }
 .script-heading--lg { font-size: 64px; }
 
 .timeline__art {
