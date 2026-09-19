@@ -119,3 +119,16 @@ a { text-decoration: none; }
 .tabbar__icons { display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 20px; }
 .tabbar--desktop { height: 64px; }
 .tabbar--desktop .tabbar__icons { max-width: 411px; margin: 0 auto; font-size: 24px; }
+.timeline__list {
+  list-style: none;
+  padding: 0;
+  margin: 24px auto 0;
+  max-width: 280px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  font-family: var(--font-title);
+  color: var(--green-mid);
+  font-size: 16px;
+  text-align: left;
+}
