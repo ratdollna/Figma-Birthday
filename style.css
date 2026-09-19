@@ -109,22 +109,6 @@ a { text-decoration: none; }
   line-height: 0;
 }
 .timeline__art img { width: 100%; display: block; }
-.timeline__label {
-  position: absolute;
-  font-family: var(--font-title);
-  color: var(--green-mid);
-  font-size: clamp(11px, 3.6vw, 15px);
-  white-space: nowrap;
-  line-height: normal;
-}
-.timeline__label--dark { color: var(--green-dark); }
-.timeline__photo {
-  position: absolute;
-  border-radius: 6px;
-  object-fit: cover;
-  height: auto;
-}
-
 /* ============ EL DIA — desktop ============ */
 .timeline--desktop { padding: 0; background: var(--cream); }
 .timeline__bg { position: relative; width: 1440px; }
