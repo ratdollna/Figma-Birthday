@@ -97,10 +97,33 @@ a { text-decoration: none; }
 .photo-strip img.kite-deco--desktop { right: 120px; top: 24px; }
 
 /* ============ EL DIA — mobile ============ */
-.timeline { position: relative; background: var(--cream); padding: 55px 0 76px; text-align: center; }
+.timeline { position: relative; background: var(--cream); padding: 55px 0 0; text-align: center; }
 .script-heading { font-family: var(--font-script-lg); font-size: 40px; color: var(--green-accent); margin: 0 0 20px; }
 .script-heading--lg { font-size: 64px; }
-.timeline__art { width: 280px; margin: 0 auto; }
+
+.timeline__art {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  margin-left: -50vw;
+  line-height: 0;
+}
+.timeline__art img { width: 100%; display: block; }
+.timeline__label {
+  position: absolute;
+  font-family: var(--font-title);
+  color: var(--green-mid);
+  font-size: clamp(11px, 3.6vw, 15px);
+  white-space: nowrap;
+  line-height: normal;
+}
+.timeline__label--dark { color: var(--green-dark); }
+.timeline__photo {
+  position: absolute;
+  border-radius: 6px;
+  object-fit: cover;
+  height: auto;
+}
 
 /* ============ EL DIA — desktop ============ */
 .timeline--desktop { padding: 0; background: var(--cream); }
@@ -119,25 +142,3 @@ a { text-decoration: none; }
 .tabbar__icons { display: flex; justify-content: space-around; align-items: center; height: 100%; font-size: 20px; }
 .tabbar--desktop { height: 64px; }
 .tabbar--desktop .tabbar__icons { max-width: 411px; margin: 0 auto; font-size: 24px; }
-.timeline__list {
-  margin: 24px auto 0;
-  max-width: 300px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-.timeline__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--font-title);
-  color: var(--green-mid);
-  font-size: 16px;
-  text-align: center;
-}
-.timeline__item img {
-  width: 100px;
-  border-radius: 8px;
-  object-fit: cover;
-}
