@@ -25,7 +25,13 @@ a { text-decoration: none; }
 .view--desktop { display: none; }
 @media (min-width: 900px) {
   .view--mobile { display: none; }
-  .view--desktop { display: block; }
+  .view--desktop { display: block; overflow: hidden; }
+
+  /* el diseño desktop es un lienzo fijo de 1440px: en pantallas más
+     angostas lo escalamos hacia abajo (via JS, ver script.js) en vez
+     de recortarlo. transform-origin arriba-izquierda para que el
+     escalado no desplace el contenido. */
+  .page--desktop { transform-origin: top left; }
 }
 
 /* full-bleed: estira el fondo de cada seccion a todo el ancho de pantalla */
@@ -109,6 +115,7 @@ a { text-decoration: none; }
   line-height: 0;
 }
 .timeline__art img { width: 100%; display: block; }
+
 /* ============ EL DIA — desktop ============ */
 .timeline--desktop { padding: 0; background: var(--cream); }
 .timeline__bg { position: relative; width: 1440px; line-height: 0; }
