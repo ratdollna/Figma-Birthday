@@ -22,3 +22,28 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000 * 30); // refresca cada 30s
+
+// ============ ESCALADO DEL DISEÑO DESKTOP ============
+// El diseño desktop es un lienzo fijo de 1440px. En pantallas más
+// angostas que eso (pero >=900px, donde ya se activa la vista desktop)
+// lo escalamos hacia abajo en vez de recortarlo.
+function scaleDesktopView() {
+  const wrap = document.querySelector(".view--desktop");
+  const page = document.querySelector(".page--desktop");
+  if (!wrap || !page) return;
+
+  if (window.innerWidth < 900) {
+    // en mobile no se usa esta vista, no hace falta tocar nada
+    page.style.transform = "";
+    wrap.style.height = "";
+    return;
+  }
+
+  const scale = Math.min(1, window.innerWidth / 1440);
+  page.style.transform = `scale(${scale})`;
+  wrap.style.height = page.offsetHeight * scale + "px";
+}
+
+window.addEventListener("resize", scaleDesktopView);
+window.addEventListener("load", scaleDesktopView);
+scaleDesktopView();
