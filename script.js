@@ -35,12 +35,18 @@ function scaleDesktopView() {
   if (window.innerWidth < 900) {
     // en mobile no se usa esta vista, no hace falta tocar nada
     page.style.transform = "";
+    page.style.marginLeft = "";
     wrap.style.height = "";
     return;
   }
 
   const scale = Math.min(1, window.innerWidth / 1440);
+  const scaledWidth = 1440 * scale;
   page.style.transform = `scale(${scale})`;
+  // centrado: left:50% (en CSS) + este margen negativo de la mitad del
+  // ancho YA escalado. "margin:auto" no sirve aquí porque la caja sin
+  // escalar (1440px) es más ancha que la pantalla en este rango.
+  page.style.marginLeft = -(scaledWidth / 2) + "px";
   wrap.style.height = page.offsetHeight * scale + "px";
 }
 
