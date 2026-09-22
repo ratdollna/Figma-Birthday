@@ -76,6 +76,15 @@ a { text-decoration: none; }
 .hero__date-text--left { left: 0; width: 96px; text-align: center; }
 .hero__date-text--right { right: 0; width: 96px; text-align: center; }
 
+/* La tarjeta desktop (478px) es más ancha que la de mobile (360px);
+   el título, el conjunto perro+torta y la fecha usan coordenadas
+   exactas de Figma para quedar centrados en la tarjeta ancha en vez
+   de heredar las posiciones pensadas para la tarjeta angosta. */
+.hero__badge--desktop .hero__title { left: 167px; top: 72.6px; }
+.hero__badge--desktop .hero__subtitle { left: 167px; top: 134.6px; }
+.hero__badge--desktop .hero__cluster { left: 75.7px; top: 187.6px; }
+.hero__badge--desktop .hero__date { left: 93.7px; top: 532.8px; }
+
 /* ============ INFO ============ */
 .info { background: var(--cream); padding: 42px 0; display: flex; flex-direction: column; align-items: center; gap: 32px; }
 .info--desktop { flex-direction: row; justify-content: center; align-items: center; gap: 40px; padding: 74px 0; }
