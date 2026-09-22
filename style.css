@@ -43,7 +43,10 @@ a { text-decoration: none; }
 .info, .timeline, .rsvp, .tabbar { --bg: var(--cream); }
 
 /* ============ HERO ============ */
-.hero { position: relative; height: 822px; overflow: hidden; background: var(--olive); }
+/* La tarjeta (título + perrito + torta + fecha + cometa) es una sola
+   imagen ya compuesta: el alto se ajusta solo al ancho para que nunca
+   se recorte, en vez de forzar una altura fija. */
+.hero { position: relative; padding: 12px 0 40px; overflow: hidden; background: var(--olive); }
 .hero__stripes {
   position: absolute; inset: 0;
   background-image: repeating-linear-gradient(
@@ -53,37 +56,9 @@ a { text-decoration: none; }
   );
 }
 
-.hero__badge { position: relative; width: 360px; height: 750px; margin: 12px auto 0; }
-.hero__badge--desktop { width: 478px; margin-left: 477px; margin-top: 12px; }
-.hero__badge-frame { position: absolute; inset: 0; width: 100%; height: 100%; }
-
-.hero__title {
-  font-family: var(--font-title); font-weight: 400; font-size: 56px;
-  color: var(--green-accent); margin: 0; position: absolute; left: 101px; top: 85px;
-}
-.hero__subtitle {
-  font-family: var(--font-script-sm); font-size: 32px; color: var(--green-accent);
-  margin: 0; position: absolute; left: 101px; top: 147px;
-}
-
-.hero__cluster { position: absolute; left: 17px; top: 200px; width: 366px; }
-.hero__kite-toy { position: absolute; left: 257px; top: 184px; width: 127px; transform: rotate(163.74deg) scaleY(-1); }
-.hero__badge--desktop .hero__kite-toy { left: 398px; }
-
-.hero__date { position: absolute; left: 35px; top: 545px; width: 298px; height: 62px; }
-.hero__date-icon { position: absolute; left: 100px; top: 0; width: 120px; }
-.hero__date-text { position: absolute; top: 12px; font-family: var(--font-title); font-size: 20px; color: var(--green-dark); }
-.hero__date-text--left { left: 0; width: 96px; text-align: center; }
-.hero__date-text--right { right: 0; width: 96px; text-align: center; }
-
-/* La tarjeta desktop (478px) es más ancha que la de mobile (360px);
-   el título, el conjunto perro+torta y la fecha usan coordenadas
-   exactas de Figma para quedar centrados en la tarjeta ancha en vez
-   de heredar las posiciones pensadas para la tarjeta angosta. */
-.hero__badge--desktop .hero__title { left: 167px; top: 72.6px; }
-.hero__badge--desktop .hero__subtitle { left: 167px; top: 134.6px; }
-.hero__badge--desktop .hero__cluster { left: 75.7px; top: 187.6px; }
-.hero__badge--desktop .hero__date { left: 93.7px; top: 532.8px; }
+.hero__badge { position: relative; width: 360px; margin: 0 auto; }
+.hero__badge--desktop { width: 478px; }
+.hero__badge img { width: 100%; display: block; }
 
 /* ============ INFO ============ */
 .info { background: var(--cream); padding: 42px 0; display: flex; flex-direction: column; align-items: center; gap: 32px; }
