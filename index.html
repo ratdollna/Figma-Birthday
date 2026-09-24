@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Figma — mi primer añito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Delius&family=Delius+Swash+Caps&family=Ms+Madi&family=Meow+Script&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ======================= MOBILE ======================= -->
+<div class="view view--mobile">
+  <div class="page">
+
+    <!-- HERO -->
+    <section class="hero" id="hero-m">
+      <div class="hero__stripes"></div>
+      <div class="hero__badge">
+        <img src="assets/images/hero-badge.png" alt="Figma — mi primer añito. Sábado 24 de Octubre" />
+      </div>
+    </section>
+
+    <!-- INFO -->
+    <section class="info" id="info-m">
+      <div class="info__block">
+        <p class="info__where">12:00 pm - Bellido 194</p>
+        <a href="#" class="btn">Cómo llegar?</a>
+      </div>
+      <div class="info__block">
+        <p class="countdown__label">Faltan</p>
+        <div class="countdown">
+          <div class="countdown__unit"><span class="countdown__num" data-unit="days">03</span><span class="countdown__word">días</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__num" data-unit="hours">10</span><span class="countdown__word">horas</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__num" data-unit="minutes">03</span><span class="countdown__word">minutos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOTO PERRO -->
+    <section class="photo-strip">
+      <img src="assets/images/dog-portrait.jpg" alt="Figma" />
+      <img class="kite-deco" src="assets/svg/kite-deco-dino.svg" alt="" />
+    </section>
+
+    <!-- EL DÍA -->
+    <section class="timeline" id="timeline-m">
+      <h2 class="script-heading">El día</h2>
+      <div class="timeline__art">
+        <img src="assets/images/timeline-mobile.png" alt="El día: Bienvenida, Foto time, Comida, Happy Birthday, Regalos y juegos, Despedida" />
+      </div>
+    </section>
+
+    <!-- FOTO BEBE + PERRO -->
+    <section class="photo-strip photo-strip--tall">
+      <img src="assets/images/baby-dog-sleeping.jpg" alt="" />
+    </section>
+
+    <!-- RSVP -->
+    <section class="rsvp" id="rsvp-m">
+      <h2 class="script-heading">¿Me acompañas?</h2>
+      <a href="#" class="btn">Ahí estaré!!</a>
+    </section>
+
+    <footer class="tabbar">
+      <div class="tabbar__icons">
+        <a href="#hero-m" class="tabbar__icon" data-target="hero-m">
+          <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+          <img class="tabbar__icon-img" src="assets/svg/nav-home.svg" alt="Inicio" />
+        </a>
+        <a href="#info-m" class="tabbar__icon" data-target="info-m">
+          <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+          <img class="tabbar__icon-img" src="assets/svg/nav-location.svg" alt="Ubicación" />
+        </a>
+        <a href="#timeline-m" class="tabbar__icon" data-target="timeline-m">
+          <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+          <img class="tabbar__icon-img" src="assets/svg/nav-day.svg" alt="El día" />
+        </a>
+        <a href="#rsvp-m" class="tabbar__icon" data-target="rsvp-m">
+          <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+          <img class="tabbar__icon-img" src="assets/svg/nav-rsvp.svg" alt="Confirmar asistencia" />
+        </a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+<!-- ======================= DESKTOP ======================= -->
+<div class="view view--desktop">
+  <div class="page page--desktop">
+
+    <section class="hero hero--desktop" id="hero-d">
+      <div class="hero__stripes"></div>
+      <div class="hero__badge hero__badge--desktop">
+        <img src="assets/images/hero-badge.png" alt="Figma — mi primer añito. Sábado 24 de Octubre" />
+      </div>
+    </section>
+
+    <section class="info info--desktop" id="info-d">
+      <div class="info__block">
+        <p class="info__where">12:00 pm - Bellido 194</p>
+        <a href="#" class="btn btn--lg">Cómo llegar?</a>
+      </div>
+      <span class="info__divider"></span>
+      <div class="info__block">
+        <p class="countdown__label countdown__label--lg">Faltan</p>
+        <div class="countdown">
+          <div class="countdown__unit"><span class="countdown__num" data-unit="days">03</span><span class="countdown__word">días</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__num" data-unit="hours">10</span><span class="countdown__word">horas</span></div>
+          <span class="countdown__sep">:</span>
+          <div class="countdown__unit"><span class="countdown__num" data-unit="minutes">03</span><span class="countdown__word">minutos</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="photo-strip">
+      <img src="assets/images/dog-portrait.jpg" alt="Figma" />
+      <img class="kite-deco kite-deco--desktop" src="assets/svg/kite-deco-dino.svg" alt="" />
+    </section>
+
+    <!-- EL DÍA - desktop usa la ilustración con la mesa horizontal -->
+    <section class="timeline timeline--desktop" id="timeline-d">
+      <div class="timeline__bg">
+        <img src="assets/images/timeline-desktop.png" alt="El día: Bienvenida, Foto time, Comida, Happy Birthday, Regalos y juegos, Despedida" />
+      </div>
+    </section>
+
+    <section class="photo-strip photo-strip--tall">
+      <img src="assets/images/baby-dog-sleeping.jpg" alt="" />
+    </section>
+
+    <section class="rsvp rsvp--desktop" id="rsvp-d">
+      <h2 class="script-heading script-heading--lg">¿Me acompañas?</h2>
+      <a href="#" class="btn btn--lg">Ahí estaré!!</a>
+    </section>
+
+  </div>
+
+  <!-- El footer va FUERA de .page--desktop a propósito: ese contenedor
+       tiene un transform:scale() (ver script.js) y un position:fixed
+       adentro de un elemento con transform deja de ser realmente "fixed"
+       respecto a la pantalla (queda fijo dentro de esa caja escalada,
+       no del viewport). Puesto aquí afuera sí queda fijo de verdad. -->
+  <footer class="tabbar tabbar--desktop">
+    <div class="tabbar__icons">
+      <a href="#hero-d" class="tabbar__icon" data-target="hero-d">
+        <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+        <img class="tabbar__icon-img" src="assets/svg/nav-home.svg" alt="Inicio" />
+      </a>
+      <a href="#info-d" class="tabbar__icon" data-target="info-d">
+        <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+        <img class="tabbar__icon-img" src="assets/svg/nav-location.svg" alt="Ubicación" />
+      </a>
+      <a href="#timeline-d" class="tabbar__icon" data-target="timeline-d">
+        <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+        <img class="tabbar__icon-img" src="assets/svg/nav-day.svg" alt="El día" />
+      </a>
+      <a href="#rsvp-d" class="tabbar__icon" data-target="rsvp-d">
+        <img class="tabbar__icon-bg" src="assets/svg/footer-swoosh.svg" alt="" />
+        <img class="tabbar__icon-img" src="assets/svg/nav-rsvp.svg" alt="Confirmar asistencia" />
+      </a>
+    </div>
+  </footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
